@@ -1,13 +1,15 @@
-%include "print_string.s"
-	mov bx, greeting
+[org 0x7c00]
+	mov bx, GREETING
 	call print_string
-	mov bx, farewell
+	mov bx, FAREWELL
 	call print_string
 	jmp $
+
+%include "print_string.s"
 	
-greeting:
+GREETING:
 	db 'Booting ASOS1', 0 	; Null terminated string
-farewell:
+FAREWELL:
 	db 'Completed Booting ASOS1', 0
 
 	times 510 - ($ - $$) db 0

@@ -1,1 +1,7 @@
 * Another Simple Operating System
+
+** Qemu
+Use the following to run boot sector code paused at the start.
+#+BEGIN_SRC sh
+  qemu-system-x86_64 -S src/test_hex.o
+#+END_SRC
