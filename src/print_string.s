@@ -1,3 +1,5 @@
+%ifndef PRINTSTRING
+%define PRINTSTRING
 print_string:
 	push ax
 	push cx
@@ -13,3 +15,4 @@ end_loop:
 	pop ax
 	ret
 	
+%endif

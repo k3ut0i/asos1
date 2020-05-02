@@ -3,5 +3,5 @@
 ** Qemu
 Use the following to run boot sector code paused at the start.
 #+BEGIN_SRC sh
-  qemu-system-x86_64 -S src/test_hex.o
+  qemu-system-x86_64 -net none -drive file=src/boot_sect.o,format=raw
 #+END_SRC

@@ -1,4 +1,4 @@
-	%ifndef DEBUG
+	%ifndef PRINTSTRING
 	%include "print_string.s"
 	%endif
 hex_to_ascii:
