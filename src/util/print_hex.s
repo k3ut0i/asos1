@@ -1,5 +1,5 @@
 	%ifndef PRINTSTRING
-	%include "print_string.s"
+	%include "util/print_string.s"
 	%endif
 hex_to_ascii:
 	cmp dl, 9
@@ -33,9 +33,7 @@ print_hex:
 	call hex_to_ascii
 	mov [HEX_OUT + 2], dl
 	mov bx, HEX_OUT
-	;; %ifndef	DEBUG
 	call print_string
-	;; %endif
 	ret
 
 	

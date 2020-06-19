@@ -3,7 +3,7 @@
 	call print_hex
 	jmp $
 
-%include "print_hex.s"
+%include "util/print_hex.s"
 
 	times 510 - ($ - $$) db 0
 	dw 0xaa55
