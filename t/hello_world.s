@@ -5,7 +5,7 @@
 	call print_string
 	jmp $
 
-%include "print_string.s"
+%include "util/print_string.s"
 	
 GREETING:
 	db 'Booting ASOS1', 0 	; Null terminated string

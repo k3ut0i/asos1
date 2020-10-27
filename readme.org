@@ -5,3 +5,10 @@ Use the following to run boot sector code paused at the start.
 #+BEGIN_SRC sh
   qemu-system-x86_64 -net none -drive file=src/boot_sect.o,format=raw
 #+END_SRC
+
+** Disassembly
+Disassembly command options that I seem to forget every time.
+#+BEGIN_SRC sh
+  ndisasm -b16 -o7c00h -a <file>
+  objdump -D -b binary --adjust-vma=0x7c00 -m i8086 -Mintel <file>
+#+END_SRC

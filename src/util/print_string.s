@@ -12,6 +12,7 @@ loop:	mov cl, byte [bx]
 	int 0x10
 	jmp loop
 end_loop:
+	pop cx
 	pop ax
 	ret
 	

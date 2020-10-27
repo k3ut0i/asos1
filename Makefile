@@ -1,9 +1,10 @@
 AS = nasm
 ASFLAGS = -Wall -f bin -Isrc
 SRCDIR = src
+VPATH = src
 TESTDIR = t
 #SRCS = $(wildcard src/*.s src/*/*.s)
-BIN_OBJS = t/test_hex.o
+BIN_OBJS = t/test_hex.o t/test_pm.o t/hello_world.o
 DEPS = $(patsubst %.o,%.d, $(BIN_OBJS))
 
 %.d : %.s

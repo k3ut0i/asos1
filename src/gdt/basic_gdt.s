@@ -44,3 +44,5 @@ gdt_descriptor:
 	;; Segment descriptor offsets
 CODE_SEG equ gdt_code - gdt_start
 DATA_SEG equ gdt_data - gdt_start	
+
+	dd 0xffff
